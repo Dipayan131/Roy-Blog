@@ -15,7 +15,7 @@ const Create = () => {
         setIsPending(true)
 
         setTimeout(() => {
-            fetch("http://localhost:8000/blogs", {
+            fetch("https://royblog-data.onrender.com/blogs", {
             method: 'POST',
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(blog)
@@ -25,7 +25,7 @@ const Create = () => {
             history.push('/')
         })
 
-        }, 1000);
+        });
         
     }
 

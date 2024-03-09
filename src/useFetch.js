@@ -31,7 +31,7 @@ useEffect(() => {
             }
             
         })
-    }, 1000);
+    });
 
     return () => abortCont.abort();
 }, [url]);
