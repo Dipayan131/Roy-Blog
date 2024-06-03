@@ -3,7 +3,7 @@ import useFetch from "./useFetch";
 
 
 const Home = () => {
-    const {data: blogs, isPending, error} = useFetch('https://royblog-data.onrender.com/blogs')
+    const {data: blogs, isPending, error} = useFetch('https://ap-south-1.aws.data.mongodb-api.com/app/application-0-gblsohc/endpoint/blogs')
 
 
     return ( 

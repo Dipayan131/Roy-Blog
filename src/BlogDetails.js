@@ -4,11 +4,11 @@ import { useHistory } from "react-router-dom";
 
 const BlogDetails = () => {
     const {id} = useParams();
-    const {data: blog, error, isPending} = useFetch('https://royblog-data.onrender.com/blogs/' + id);
+    const {data: blog, error, isPending} = useFetch(`https://ap-south-1.aws.data.mongodb-api.com/app/application-0-gblsohc/endpoint/blogs?id=${id}`);
     const history = useHistory();
 
     const handleClick = () => {
-        fetch('https://royblog-data.onrender.com/blogs/' + blog.id, {
+        fetch(`https://ap-south-1.aws.data.mongodb-api.com/app/application-0-gblsohc/endpoint/blogDelete?id=${blog.id}`, {
             method: 'DELETE'
         }).then(() => {
             history.push('/');
